@@ -13,8 +13,7 @@
   ],
   "scripts": {
     "test": "gulp test",
-    "publish-please": "publish-please",
-    "prepublish": "publish-please guard"
+    "publish-please": "publish-please"
   },
   "keywords": [
     "testcafe",
@@ -40,6 +39,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
+    "https-proxy-agent": "^3.0.1",
     "npm": "^6.12.0"
   },
   "bugs": {
@@ -48,5 +48,8 @@
   "homepage": "https://github.com/acebano/testcafe-reporter-db#readme",
   "directories": {
     "test": "test"
+  },
+  "resolutions": {
+    "https-proxy-agent": "^3.0.0"
   }
 }
