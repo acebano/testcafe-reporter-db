@@ -1,6 +1,6 @@
 {
   "name": "testcafe-reporter-db",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "db TestCafe reporter plugin.",
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
   "dependencies": {
     "@babel/runtime": "^7.3.4",
     "https-proxy-agent": "^3.0.1",
+    "np": "^5.1.1",
     "npm": "^6.12.0"
   },
   "bugs": {
