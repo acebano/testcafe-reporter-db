@@ -12,7 +12,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "gulp test",
+    "test": "echo \"No test specified\"",
     "publish-please": "publish-please"
   },
   "keywords": [
