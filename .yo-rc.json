@@ -1,0 +1,8 @@
+{
+  "generator-testcafe-reporter": {
+    "promptValues": {
+      "githubUsername": "acebano",
+      "website": ""
+    }
+  }
+}
