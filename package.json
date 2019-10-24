@@ -2,10 +2,11 @@
   "name": "testcafe-reporter-db",
   "version": "0.0.1",
   "description": "db TestCafe reporter plugin.",
-  "repository": "https://github.com/acebano/testcafe-reporter-db",
-  "author": {
-    "name": "acebano"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acebano/testcafe-reporter-db.git"
   },
+  "author": "acebano",
   "main": "lib/index",
   "files": [
     "lib"
@@ -38,6 +39,14 @@
     "testcafe": "^1.0.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.3.4"
+    "@babel/runtime": "^7.3.4",
+    "npm": "^6.12.0"
+  },
+  "bugs": {
+    "url": "https://github.com/acebano/testcafe-reporter-db/issues"
+  },
+  "homepage": "https://github.com/acebano/testcafe-reporter-db#readme",
+  "directories": {
+    "test": "test"
   }
 }
