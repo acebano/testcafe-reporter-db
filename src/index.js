@@ -188,9 +188,9 @@ exports.default = function () {
                 ? 0
                 : 1;
   
-            const sql = `INSERT INTO ${process.env.TESTCAFEREPORTER_DB_TABLE} (date, run_number, run_result, test_total, test_passed, test_failed, test_skipped, test_duration, test_device, test_environment, test_other_1) VALUES ?`;
+            const sql = `INSERT INTO ${process.env.TESTCAFEREPORTER_DB_TABLE} (date, run_number, run_result, test_total, test_passed, test_failed, test_skipped, test_duration, test_device, test_browser, test_environment, test_other_1) VALUES ?`;
             const values = [
-                [endTime, createTestNumber, testResult, this.testCount, passed, this.testCount - passed, this.skipped, durationMs, process.env.TESTCAFEREPORTER_DB_DEVICE, process.env.TESTCAFEREPORTER_DB_ENV, process.env.TESTCAFEREPORTER_DB_OTHER_RUN ]
+                [endTime, createTestNumber, testResult, this.testCount, passed, this.testCount - passed, this.skipped, durationMs, process.env.TESTCAFEREPORTER_DB_DEVICE, process.env.TESTCAFEREPORTER_DB_BROWSER, process.env.TESTCAFEREPORTER_DB_ENV, process.env.TESTCAFEREPORTER_DB_OTHER_RUN ]
             ];
 
             conTests.query(sql, [values], (err, result, fields) => {
