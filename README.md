@@ -56,6 +56,7 @@ If you are interested in store each test result, you should use 1. If you are in
 ```
 TESTCAFEREPORTER_DB_TESTSTORED=
 TESTCAFEREPORTER_DB_DEVICE=
+TESTCAFEREPORTER_DB_BROWSER=
 TESTCAFEREPORTER_DB_ENV=
 TESTCAFEREPORTER_DB_OTHER_RUN=
 TESTCAFEREPORTER_DB_OTHER_TEST=
@@ -79,6 +80,7 @@ Fields:
 | test_skipped  | Int | 4 | No | None |
 | test_duration  | Varchar | 10 | No | None |
 | test_device  | Varchar | 50 | Yes | None |
+| test_browser  | Varchar | 150 | Yes | None |
 | test_environment  | Varchar | 50 | Yes | None |
 | test_other_1  | Varchar | 50 | Yes | None |
 

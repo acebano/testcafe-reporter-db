@@ -115,7 +115,7 @@ exports.default = function () {
   
             this.newline();
     
-            if (process.env.TESTCAFEREPORTER_DB_TEST_STORED < 1) {
+            if (process.env.TESTCAFEREPORTER_DB_TEST_STORED === 0 && testStatus === 1) {
                 const sql = `INSERT INTO ${process.env.TESTCAFEREPORTER_DB_TESTTABLE} (run_number, fixture_name, test_name, test_result, test_other) VALUES ?`;
                 const values = [
                     [createTestNumber, this.currentFixtureName, name, testStatus, process.env.TESTCAFEREPORTER_DB_OTHER_TEST ],
@@ -124,7 +124,16 @@ exports.default = function () {
                 conTests.query(sql, [values], (err, result, fields) => {
                     if (err) throw err;
                 });
-            } 
+            } else if (process.env.TESTCAFEREPORTER_DB_TEST_STORED === 1) {
+                const sql = `INSERT INTO ${process.env.TESTCAFEREPORTER_DB_TESTTABLE} (run_number, fixture_name, test_name, test_result, test_other) VALUES ?`;
+                const values = [
+                    [createTestNumber, this.currentFixtureName, name, testStatus, process.env.TESTCAFEREPORTER_DB_OTHER_TEST ],
+                ];
+
+                conTests.query(sql, [values], (err, result, fields) => {
+                    if (err) throw err;
+                });
+            }
         },
   
         _renderWarnings: function _renderWarnings (warnings) {
@@ -172,16 +181,16 @@ exports.default = function () {
   
             this.setIndent(1)
                 .useWordWrap(true)
-                .write(this.chalk.bold(`Saving results in: ${process.env.TESTRESULT_LOCAL_HOST}`))
+                .write(this.chalk.bold(`Saving results in: ${process.env.TESTCAFEREPORTER_DB_HOST}`))
                 .newline();
 
             const testResult = passed === this.testCount
                 ? 0
                 : 1;
   
-            const sql = `INSERT INTO ${process.env.TESTCAFEREPORTER_DB_TABLE} (date, run_number, run_result, test_total, test_passed, test_failed, test_skipped, test_duration, test_device, test_environment, test_other_1) VALUES ?`;
+            const sql = `INSERT INTO ${process.env.TESTCAFEREPORTER_DB_TABLE} (date, run_number, run_result, test_total, test_passed, test_failed, test_skipped, test_duration, test_device, test_browser, test_environment, test_other_1) VALUES ?`;
             const values = [
-                [endTime, createTestNumber, testResult, this.testCount, passed, this.testCount - passed, this.skipped, durationMs, process.env.TESTCAFEREPORTER_DB_DEVICE, process.env.TESTCAFEREPORTER_DB_ENV, process.env.TESTCAFEREPORTER_DB_OTHER_RUN ]
+                [endTime, createTestNumber, testResult, this.testCount, passed, this.testCount - passed, this.skipped, durationMs, process.env.TESTCAFEREPORTER_DB_DEVICE, process.env.TESTCAFEREPORTER_DB_BROWSER, process.env.TESTCAFEREPORTER_DB_ENV, process.env.TESTCAFEREPORTER_DB_OTHER_RUN ]
             ];
 
             conTests.query(sql, [values], (err, result, fields) => {
