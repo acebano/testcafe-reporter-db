@@ -1,6 +1,6 @@
 {
   "name": "testcafe-reporter-db",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "db TestCafe reporter plugin.",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-eslint": "^5.0.0",
-    "gulp-mocha": "^6.0.0",
+    "gulp-mocha": "^8.0.0",
     "normalize-newline": "^1.0.2",
     "publish-please": "^5.5.2",
     "read-file-relative": "^1.2.0",
@@ -42,7 +42,7 @@
     "https-proxy-agent": "^3.0.1",
     "mysql": "^2.17.1",
     "np": "^7.0.0",
-    "npm": "^7.0.14"
+    "npm": "^7.12.0"
   },
   "bugs": {
     "url": "https://github.com/acebano/testcafe-reporter-db/issues"
