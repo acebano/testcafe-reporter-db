@@ -1,6 +1,10 @@
 {
   "name": "testcafe-reporter-db",
+<<<<<<< HEAD
   "version": "0.0.7",
+=======
+  "version": "0.0.6",
+>>>>>>> d4eba3a844b6c35c2328d89d75d7610f8509fcd1
   "description": "db TestCafe reporter plugin.",
   "repository": {
     "type": "git",
@@ -24,6 +28,10 @@
     "babel-eslint": "^10.0.1",
     "callsite-record": "^3.2.0",
     "del": "^1.2.0",
+<<<<<<< HEAD
+=======
+    "gulp": "^4.0.2",
+>>>>>>> d4eba3a844b6c35c2328d89d75d7610f8509fcd1
     "gulp-babel": "^8.0.0",
     "gulp-eslint": "^5.0.0",
     "gulp-mocha": "^8.0.0",
@@ -33,8 +41,14 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
+    "hosted-git-info": "^4.0.2",
     "https-proxy-agent": "^3.0.1",
+    "lodash": "^4.17.21",
     "mysql": "^2.17.1",
+<<<<<<< HEAD
+=======
+    "np": "^7.0.0",
+>>>>>>> d4eba3a844b6c35c2328d89d75d7610f8509fcd1
     "npm": "^7.12.0",
     "yargs-parser": "^20.2.7"
   },
