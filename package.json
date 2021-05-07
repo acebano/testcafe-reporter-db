@@ -1,6 +1,6 @@
 {
   "name": "testcafe-reporter-db",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "db TestCafe reporter plugin.",
   "repository": {
     "type": "git",
