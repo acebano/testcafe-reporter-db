@@ -42,7 +42,7 @@
     "https-proxy-agent": "^3.0.1",
     "mysql": "^2.17.1",
     "np": "^7.0.0",
-    "npm": "^7.12.0"
+    "npm": "^8.11.0"
   },
   "bugs": {
     "url": "https://github.com/acebano/testcafe-reporter-db/issues"
